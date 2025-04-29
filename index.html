@@ -2,31 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Watsonx Gen AI Challenge - Lab 4</title>
+  <!-- Responsive viewport for mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBM watsonx Assistant - Lab4</title>
+
+  <!-- Google Fonts (Roboto) for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" 
+    rel="stylesheet">
+
   <style>
+    /* Reset default margins and set font */
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Header area styling */
+    header {
       text-align: center;
+      padding: 2rem 1rem;
+      width: 100%;
+      background: #f7f7f7;
     }
-    a {
+    /* Title and subtitle */
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+    header p.subtitle {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    /* Download button styling */
+    .button {
+      display: inline-block;
+      margin: 1rem 0;
+      background-color: #0072C6; /* IBM blue */
+      color: #fff;
+      padding: 0.75rem 1.5rem;
       text-decoration: none;
-      color: white;
-      background-color: #28a745;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 18px;
+      font-weight: 700;
+      border-radius: 0.3rem;
     }
-    a:hover {
-      background-color: #1e7e34;
+    /* Responsive PDF iframe: fills width, fixed height */
+    iframe {
+      border: none;
+      width: 100%;
+      height: 80vh; /* 80% of viewport height */
+    }
+    /* Ensure body background (optional) */
+    body {
+      background-color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <h1>Watsonx Gen AI Challenge - Lab 4</h1>
-  <p>
-    <a href="lab4.pdf" download>⬇️ Download Lab 4 PDF</a>
-  </p>
+
+  <!-- Page header with title, subtitle, and download button -->
+  <header>
+    <h1>IBM watsonx Assistant – Lab4</h1>
+    <p class="subtitle">Hands-on Lab Guide</p>
+    <a href="Lab4.pdf" class="button" download>Download PDF Guide</a>
+  </header>
+
+  <!-- Embedded PDF viewer (fills page width) -->
+  <!-- 
+    We use an <iframe> to display the PDF inline. 
+    Using an iframe is a common way to embed PDFs directly in a page&#8203;:contentReference[oaicite:2]{index=2}. 
+    Alternatively, Google Docs Viewer can be used by setting the iframe src to 
+    https://docs.google.com/gview?url=[PDF_URL]&embedded=true&#8203;:contentReference[oaicite:3]{index=3}.
+  -->
+  <iframe 
+    src="lab4.pdf" 
+    title="Lab4 PDF Guide">
+  </iframe>
+
 </body>
 </html>
